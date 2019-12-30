@@ -11,6 +11,7 @@ import usersRouter from './routes/users';
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'static')));
+app.use('/modules', express.static(__dirname + '/node_modules/'));
 nunjucks.configure(path.join(__dirname, 'views'), {
     autoescape: true,
     express: app,
