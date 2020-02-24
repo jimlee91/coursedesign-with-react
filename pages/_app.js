@@ -6,12 +6,16 @@ import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
 import reducer from '../reducers';
 import rootSaga from '../sagas';
+import GlobalStyle from '../components/globalStyle';
 
 const NodeBird = ({ Component, store }) => {
   return (
-    <Provider store={store}>
-      <Component />
-    </Provider>
+    <div className="wrapper">
+      <GlobalStyle />
+      <Provider store={store}>
+        <Component />
+      </Provider>
+    </div>
   );
 };
 

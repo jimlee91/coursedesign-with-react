@@ -1,7 +1,16 @@
-import React from "react";
+import React from 'react';
+import styled from 'styled-components';
 
 const index = () => {
-  return <div>index Hello!</div>;
+  return (
+    <div>
+      <Button>Hello!</Button>
+    </div>
+  );
 };
+
+const Button = styled.button`
+  background: #ccc;
+`;
 
 export default index;
