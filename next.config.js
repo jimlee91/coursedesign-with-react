@@ -3,4 +3,7 @@ module.exports = {
   devIndicators: {
     autoPrerender: false,
   },
+  exportPathMap: () => ({
+    '/': { page: '/' },
+  }),
 };
