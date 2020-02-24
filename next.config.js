@@ -5,5 +5,6 @@ module.exports = {
   },
   exportPathMap: () => ({
     '/': { page: '/' },
+    '/calendar': { page: '/calendar' },
   }),
 };
