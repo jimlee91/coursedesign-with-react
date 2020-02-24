@@ -1,5 +1,6 @@
 module.exports = {
+  distDir: 'build',
   devIndicators: {
-    autoPrerender: false
-  }
+    autoPrerender: false,
+  },
 };
