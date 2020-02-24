@@ -10,7 +10,7 @@ const TopLink = () => {
             <img src="/icon/map.png" alt="지도" />
           </a>
         </Link>
-        <Link href="/mypage">
+        <Link href="/mypage?case=mine">
           <a>
             <img src="/icon/user.png" alt="유저" />
           </a>

@@ -8,7 +8,7 @@ import reducer from '../reducers';
 import rootSaga from '../sagas';
 import GlobalStyle from '../components/GlobalStyle';
 
-const NodeBird = ({ Component, store }) => {
+const App = ({ Component, store }) => {
   return (
     <div className="wrapper">
       <GlobalStyle />
@@ -19,7 +19,7 @@ const NodeBird = ({ Component, store }) => {
   );
 };
 
-NodeBird.propTypes = {
+App.propTypes = {
   Component: PropTypes.elementType,
   store: PropTypes.object,
 };
@@ -41,4 +41,4 @@ export default withRedux((initialState, options) => {
   sagaMiddleware.run(rootSaga);
   // 여기에 Store 커스터마이징,
   return store;
-})(NodeBird);
+})(App);

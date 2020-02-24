@@ -275,14 +275,14 @@ select[multiple] {
   position: absolute;
   right: 1em;
   bottom: 1em;
-  background: url("../images/icon/heart.png") no-repeat center;
+  background: url(${'/icon/heart.png'}) no-repeat center;
   width: 23px;
   height: 20px;
   background-size: 100% 100%;
   text-indent: -9999px;
   overflow: hidden; }
   .hasCourse.active {
-    background: url("../images/icon/heart-active.png") no-repeat center;
+  background: url(${'/icon/heart-active.png'}) no-repeat center;
     background-size: 100% 100%; }
 
 /* plugin */
@@ -450,7 +450,7 @@ select[multiple] {
     height: 45px;
     text-indent: -9999px;
     overflow: hidden;
-    background: url("../images/icon/search.png") no-repeat center;
+    background: url(${'/icon/search.png'}) no-repeat center;
     text-indent: -9999px;
     overflow: hidden;
     background-size: 20px auto;
@@ -460,13 +460,13 @@ select[multiple] {
     height: 45px;
     text-indent: -9999px;
     overflow: hidden;
-    background: url("../images/icon/back.png") no-repeat 5px center;
+    background: url(${'/icon/back.png'}) no-repeat 5px center;
     text-indent: -9999px;
     overflow: hidden;
     background-size: 20px auto;
     margin-right: auto; }
     .header .history-back.black {
-      background: url("../images/icon/back-black.png") no-repeat center;
+      background: url(${'/icon/back-black.png'}) no-repeat center;
       text-indent: -9999px;
       overflow: hidden;
       background-size: 20px auto; }
@@ -475,7 +475,7 @@ select[multiple] {
     height: 45px;
     text-indent: -9999px;
     overflow: hidden;
-    background: url("../images/icon/close.png") no-repeat center;
+    background: url(${'/icon/close.png'}) no-repeat center;
     text-indent: -9999px;
     overflow: hidden;
     background-size: 15px auto;
@@ -485,7 +485,7 @@ select[multiple] {
     height: 45px;
     text-indent: -9999px;
     overflow: hidden;
-    background: url("../images/icon/check.png") no-repeat center;
+    background: url(${'/icon/check.png'}) no-repeat center;
     text-indent: -9999px;
     overflow: hidden;
     background-size: 23px auto;
@@ -493,7 +493,7 @@ select[multiple] {
   .header .header__menu {
     width: 23px;
     height: 18px;
-    background: url("../images/icon/menu.png") no-repeat center;
+    background: url(${'/icon/menu.png'}) no-repeat center;
     text-indent: -9999px;
     overflow: hidden;
     background-size: 100% 100%; }
@@ -539,7 +539,7 @@ select[multiple] {
     overflow: hidden;
     width: 45px;
     height: 45px;
-    background: url("../images/icon/search.png") no-repeat center;
+    background: url(${'/icon/search.png'}) no-repeat center;
     background-size: 15px auto; }
 
 .mapSearchList li {
@@ -731,40 +731,10 @@ select[multiple] {
     border-bottom: 1px solid #e5e5e5; }
     .privacy .privacy__description.js-active {
       display: block; }
-  .privacy .privacy__dropdown {
-    width: 45px;
-    height: 45px;
-    text-indent: -9999px;
-    overflow: hidden;
-    background: url("../images/icon/dropdown.png") no-repeat center;
-    background-size: 15px auto; }
     .privacy .privacy__dropdown.js-active {
       -webkit-transform: rotate(180deg);
               transform: rotate(180deg); }
 
-.checkbox {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start; }
-  .checkbox input {
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    opacity: 0; }
-    .checkbox input + span {
-      width: 1em;
-      height: 1em;
-      background: #eee;
-      margin-right: 10px;
-      border-radius: 50%;
-      -webkit-transition: all .3s;
-      transition: all .3s; }
-    .checkbox input:checked + span {
-      background: #ff6155; }
   .checkbox em {
     font-style: normal;
     color: #ff6155;
@@ -777,14 +747,6 @@ select[multiple] {
   display: flex;
   padding-bottom: 2px;
   position: relative; }
-  .tab:after {
-    position: absolute;
-    bottom: 0;
-    background: #4e8df5;
-    content: '';
-    height: 2px;
-    -webkit-transition: all .3s;
-    transition: all .3s; }
   .tab.tab--guide:after {
     width: 16.666%; }
   .tab.tab--guide.js-act1:after {
@@ -852,8 +814,18 @@ select[multiple] {
       left: 0; }
     .tab.tab--mypage.js-act2:after {
       left: 50%; }
-    .tab.tab--mypage button {
-      font-size: 14px; }
+    .tab.tab--mypage a {
+      font-size: 14px; position:relative;}
+      .tab.tab--mypage a.active:after {
+        position: absolute;
+        z-index: 2;
+      bottom: -2px;
+      background: #4e8df5;
+      content: '';
+      height: 2px;
+      width: 100%;
+      display: block;
+      }
   .tab.tab--map {
     background: #fff;
     border-bottom: 1px solid #c9c9c9; }
@@ -2408,22 +2380,22 @@ select[multiple] {
     margin-right: 15px;
     font-size: 12px; }
   .status .bookmark {
-    background: url("../images/icon/bookmark.png") no-repeat left center;
+    background: url(${'/icon/bookmark.png'}) no-repeat left center;
     background-size: auto 1em; }
   .status .bookmark.active {
-    background: url("../images/icon/bookmark-active.png") no-repeat left center;
+    background: url(${'/icon/bookmark-active.png'}) no-repeat left center;
     background-size: auto 1em; }
   .status .like {
-    background: url("../images/icon/statusheart.png") no-repeat left center;
+    background: url(${'/icon/statusheart.png'}) no-repeat left center;
     background-size: auto 1em; }
   .status .like-active {
-    background: url("../images/icon/statusheart-red.png") no-repeat left center;
+    background: url(${'/icon/statusheart-red.png'}) no-repeat left center;
     background-size: auto 1em; }
   .status .share {
-    background: url("../images/icon/share.png") no-repeat left center;
+    background: url(${'/icon/share.png'}) no-repeat left center;
     background-size: auto 1em; }
   .status .download {
-    background: url("../images/icon/download.png") no-repeat left center;
+    background: url(${'/icon/download.png'}) no-repeat left center;
     background-size: auto 1em; }
 
 .detail__top {
@@ -2462,11 +2434,11 @@ select[multiple] {
         -ms-flex-pack: start;
             justify-content: flex-start; }
     .detail__top .detail__case.detail__case--food {
-      background: url("../images/icon/food-white.png") #4e8df5 no-repeat 10px center;
+      background: url(${'/icon/food-white.png'}) #4e8df5 no-repeat 10px center;
       background-size: auto 1em;
       padding: 0 10px 0 30px; }
     .detail__top .detail__case.detail__case--home {
-      background: url("../images/icon/home-white.png") #4e8df5 no-repeat 10px center;
+      background: url(${'/icon/home-white.png'}) #4e8df5 no-repeat 10px center;
       background-size: auto 1em;
       padding: 0 10px 0 30px; }
   .detail__top .detail__star {

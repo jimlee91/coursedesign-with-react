@@ -1,7 +1,9 @@
 import React from 'react';
-import Link from 'next/link';
+import { useDispatch } from 'react-redux';
 
 const login = () => {
+  const dispatch = useDispatch();
+
   return (
     <>
       <div className="page login">
@@ -11,15 +13,13 @@ const login = () => {
           </div>
           <h1 className="login__title">길을 만드는 사람들, 코스디자인</h1>
           <div className="login__sns">
-            <Link href="http://stg.coursedesign.co.kr:3000/v1/authorize/kakao">
-              <a className="btn color-yello bolder">카카오로 시작하기</a>
-            </Link>
-            <Link href="">
-              <a className="btn color-green bolder">페이스북으로 시작하기</a>
-            </Link>
-            <Link href="">
-              <a className="btn color-blue bolder">네이버로 시작하기</a>
-            </Link>
+            <button className="btn color-yello bolder">
+              카카오로 시작하기
+            </button>
+            <button className="btn color-green bolder">
+              페이스북으로 시작하기
+            </button>
+            {/* <button className="btn color-blue bolder">네이버로 시작하기</button> */}
           </div>
         </div>
       </div>
