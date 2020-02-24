@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const login = () => {
   return (
@@ -9,17 +10,16 @@ const login = () => {
             <img src="/main-logo.png" alt="" />
           </div>
           <h1 className="login__title">길을 만드는 사람들, 코스디자인</h1>
-
           <div className="login__sns">
-            <a href="" className="btn color-yello bolder">
-              카카오로 시작하기
-            </a>
-            <a href="" className="btn color-green bolder">
-              페이스북으로 시작하기
-            </a>
-            <a href="" className="btn color-blue bolder">
-              네이버로 시작하기
-            </a>
+            <Link href="http://stg.coursedesign.co.kr:3000/v1/authorize/kakao">
+              <a className="btn color-yello bolder">카카오로 시작하기</a>
+            </Link>
+            <Link href="">
+              <a className="btn color-green bolder">페이스북으로 시작하기</a>
+            </Link>
+            <Link href="">
+              <a className="btn color-blue bolder">네이버로 시작하기</a>
+            </Link>
           </div>
         </div>
       </div>
