@@ -1707,10 +1707,7 @@ select[multiple] {
       bottom: 1em; }
 
 .guide__top {
-  width: 100%;
-  background-image: url("../images/dummy/guide-dummy.png");
-  background-repeat: no-repeat;
-  background-size: cover; }
+  width: 100%;}
   .guide__top .wrap {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1748,7 +1745,7 @@ select[multiple] {
         -ms-flex-pack: start;
             justify-content: flex-start; }
 .guide__top .guide__date .state{color:#fff;}
-.guide__top .guide__date .more{width: 25px;height: 30px;background: url("../images/icon/guide-datemore.png") no-repeat right center;background-size: auto 15px;text-indent: -9999px;overflow: hidden;}
+
 .guide__guide-item {
   border-bottom: 1px solid #dcdcdc; }
   .guide__guide-item a {
@@ -2325,31 +2322,7 @@ select[multiple] {
             justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
-  .courseDetail__header .courseDetail__thumbnail {
-    -webkit-box-flex: 0;
-        -ms-flex: none;
-            flex: none;
-    width: 150px;
-    border-radius: .75em;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    margin-right: 20px;
-    position: relative; }
-    .courseDetail__header .courseDetail__thumbnail a {
-      width: 30px;
-      height: 30px;
-      display: block;
-      background: url("../images/icon/white-plus.png") #ff6155 no-repeat center;
-      background-size: auto 10px;
-      text-indent: -9999px;
-      overflow: hidden;
-      border-radius: 50%;
-      position: absolute;
-      left: 50%;
-      bottom: -15px;
-      -webkit-transform: translateX(-50%);
-              transform: translateX(-50%); }
+    .courseDetail__header .courseDetail__thumbnail a 
   .courseDetail__header .courseDetail__info {
     -webkit-box-flex: 1;
         -ms-flex: 1;
@@ -2869,9 +2842,6 @@ select[multiple] {
 .header__title{margin-right: auto;color:#fff;font-size: 16px;font-weight: 500;}
 .guide.page.searchContent .tab--guide{position:fixed;left: 0;top: 50px;z-index: 1000;width: 100%;}
 .guide.page.searchContent .searchContent__form{position:fixed;left: 0;top: 122px;z-index: 1000;width: 100%;}
-.guide__view{display: none;}
-#guide__guide{display: block;}
-#guide__course h2{margin-bottom: 0;}
 
 .searchContent__form{border-bottom: 1px solid #b2b2b2;background:#fff;}
 .searchContent__form input{height: 45px;padding:0 15px;padding-left: 35px;background:url('../images/icon/search-gray.png') no-repeat 10px center;background-size: auto 18px;}

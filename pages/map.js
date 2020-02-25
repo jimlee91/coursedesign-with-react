@@ -1,7 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const map = () => {
-  return <div>map Hello!</div>;
+  return (
+    <>
+      <span>map</span>
+    </>
+  );
 };
 
 export default map;

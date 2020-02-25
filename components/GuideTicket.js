@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const GuideTicket = () => {
   return (
@@ -16,21 +17,17 @@ const GuideTicket = () => {
               <div className="guide__item-etc">
                 <div className="guide__item-heart active">10</div>
                 <div className="guide__item-star">
-                  <img src="./assets/images/icon/star-active.png" alt="" />
-                  <img src="./assets/images/icon/star-active.png" alt="" />
-                  <img src="./assets/images/icon/star-active.png" alt="" />
-                  <img src="./assets/images/icon/star-active.png" alt="" />
-                  <img src="./assets/images/icon/star.png" alt="" />
+                  <img src="/icon/star-active.png" alt="" />
+                  <img src="/icon/star-active.png" alt="" />
+                  <img src="/icon/star-active.png" alt="" />
+                  <img src="/icon/star-active.png" alt="" />
+                  <img src="/icon/star.png" alt="" />
                   <span>4.0 (32)</span>
                 </div>
               </div>
               <div className="guide__item-link">
                 <a href="#//">
-                  <img
-                    src="./assets/images/icon/myrealtrip.png"
-                    alt=""
-                    className="ticket"
-                  />
+                  <img src="/icon/myrealtrip.png" alt="" className="ticket" />
                   <span className="prc">
                     <strong>321,177</strong> 원
                   </span>

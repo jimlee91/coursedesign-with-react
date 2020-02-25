@@ -1,26 +1,40 @@
 import React from 'react';
 import Link from 'next/link';
+import styled from 'styled-components';
 
-const GuideTop = () => {
+const GuideTop = React.memo(({ title, thumbnail }) => {
   return (
     <>
-      <div className="guide__top">
+      <GuideTopBox className="guide__top" thumbnail={thumbnail}>
         <div className="wrap">
-          <h1>CHIANG MAI</h1>
+          <h1>{title}</h1>
           <p>치앙마이, 치앙라이, 빠이</p>
 
           <div className="guide__date">
-            <Link href="/courseDetail">
-              <a className="state">2019.06.12 - 06.20</a>
+            <Link href="/myCourse">
+              <a className="state">일정 등록하기</a>
             </Link>
             <Link href="/myCourse">
-              <a className="more">more</a>
+              <ButtonMore>more</ButtonMore>
             </Link>
           </div>
         </div>
-      </div>
+      </GuideTopBox>
     </>
   );
-};
+});
+
+const GuideTopBox = styled.div`
+  background: url(${props => props.thumbnail}) no-repeat center;
+  background-size: cover;
+`;
+const ButtonMore = styled.a`
+  width: 25px;
+  height: 30px;
+  background: url('/icon/guide-datemore.png') no-repeat right center;
+  background-size: auto 15px;
+  text-indent: -9999px;
+  overflow: hidden;
+`;
 
 export default GuideTop;

@@ -1,4 +1,6 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { useDispatch, useSelector } from 'react-redux';
 
 import GuideHeader from '../components/GuideHeader';
 import GuideTop from '../components/GuideTop';
@@ -10,16 +12,29 @@ import GuideFood from '../components/GuideFood';
 import GuideHotel from '../components/GuideHotel';
 import GuideTicket from '../components/GuideTicket';
 
+import { CITY_REQUEST } from '../reducers/cities';
+
 const guide = () => {
+  const dispatch = useDispatch();
+  const { city } = useSelector(state => state.cities);
   const [selectedTab, setSelectedTab] = useState('guide');
   const onChangeTab = tab => {
     setSelectedTab(tab);
   };
+  useEffect(() => {
+    dispatch({
+      type: CITY_REQUEST,
+    });
+  }, []);
+
   return (
     <>
       <div className="page guide">
         <GuideHeader />
-        <GuideTop />
+        <GuideTop
+          title={city && city.name}
+          thumbnail={city && city.thumbnail}
+        />
         <div className="tab tab--guide">
           <button onClick={() => onChangeTab('guide')}>
             <ContentButton icon={`/icon/guide-tab1.png`} text={`가이드`} />
@@ -41,12 +56,16 @@ const guide = () => {
           </button>
         </div>
         <div className="guide__body">
-          {selectedTab === 'guide' && <GuideGuide />}
-          {selectedTab === 'course' && <GuideCourse />}
-          {selectedTab === 'tour' && <GuideTrip />}
-          {selectedTab === 'food' && <GuideFood />}
-          {selectedTab === 'hotel' && <GuideHotel />}
-          {selectedTab === 'ticket' && <GuideTicket />}
+          {selectedTab === 'guide' && <GuideGuide data={city && city.guides} />}
+          {selectedTab === 'course' && (
+            <GuideCourse data={city && city.courses} />
+          )}
+          {selectedTab === 'tour' && <GuideTrip data={city && city.tours} />}
+          {selectedTab === 'food' && <GuideFood data={city && city.foods} />}
+          {selectedTab === 'hotel' && <GuideHotel data={city && city.hotels} />}
+          {selectedTab === 'ticket' && (
+            <GuideTicket data={city && city.tickets} />
+          )}
         </div>
       </div>
     </>

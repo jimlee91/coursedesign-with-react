@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 
-const GuideHeader = () => {
+const GuideHeader = React.memo(() => {
   const router = useRouter();
   // TODO: 도시 좋아요를 누른 컨텐츠 갯수 가져오기
 
@@ -28,6 +28,6 @@ const GuideHeader = () => {
       </div>
     </>
   );
-};
+});
 
 export default GuideHeader;
