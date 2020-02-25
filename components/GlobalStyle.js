@@ -1570,15 +1570,22 @@ select[multiple] {
   margin-top: 15%; }
 
 .page.citySearch {
-  padding-top: 80px; }
+  padding-top: 60px; }
 
 .citySearch .header {
-  padding: 15px 0;
+  height: 60px !important;;
+  align-items:center;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-
+  .citySearch .header .search {
+    height: 40px;
+  }
+  .citySearch .header .search button {
+    height: 40px;
+    width: 40px;
+  }
 .citySearch__body {
   padding: 30px 0  50px; }
 
@@ -1633,10 +1640,23 @@ select[multiple] {
   position: relative;
   -webkit-box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3); }
+          .citySearch__thumbnail img{
+            position:absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
   .citySearch__thumbnail strong {
     color: #fff;
     font-size: 18px;
-    font-weight: 800; }
+    font-weight: 800; 
+    position:relative;
+    z-index: 10;}
+  .citySearch__thumbnail span {
+    z-index: 10;}
 
 .citySearch__info {
   padding: 10px 0 0; }

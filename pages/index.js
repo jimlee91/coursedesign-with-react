@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
 
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -11,6 +12,7 @@ import MainCourse from '../components/MainCourse';
 
 const index = () => {
   const dispatch = useDispatch();
+  const router = useRouter();
   const { me } = useSelector(state => state.user);
 
   return (
@@ -19,16 +21,14 @@ const index = () => {
       <div className="page main">
         <TopLink />
         <div className="container">
-          <form action="">
-            <div className="search">
-              <input
-                type="text"
-                placeholder={`${me && me.nickName}님은 어디로 떠나시나요?`}
-                onClick="location.href='./search'"
-              />
-              <button type="submit">검색</button>
-            </div>
-          </form>
+          <div className="search" onClick={() => router.push('/search')}>
+            <input
+              type="text"
+              placeholder={`${me && me.nickName}님은 어디로 떠나시나요?`}
+              disabled
+            />
+            <button type="submit">검색</button>
+          </div>
           <div className="traverLocation">
             <div className="slider">
               <div className="slider__item">
