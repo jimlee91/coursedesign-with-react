@@ -1,5 +1,7 @@
 node_modules/
+.next/
 
-package-lock.json
+build/
+.now
 
-static
+.DS_Store
