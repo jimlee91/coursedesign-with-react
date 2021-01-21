@@ -28,7 +28,7 @@
     "babel-plugin-styled-components": "^1.10.7",
     "google-map-react": "^1.1.6",
     "google-maps-react": "^2.0.2",
-    "immer": "^5.3.6",
+    "immer": "^8.0.1",
     "next": "^9.2.2",
     "next-redux-wrapper": "^5.0.0",
     "prop-types": "^15.7.2",
